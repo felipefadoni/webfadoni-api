@@ -5,11 +5,11 @@ const config = {
   name: 'Noticias',
   connector: 'mysql',
   url: '',
-  host: 'localhost',
+  host: process.env.DB_HOST,
   port: 3306,
-  user: 'root',
-  password: '102030',
-  database: 'webfadoni',
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
 };
 
 // Observe application's life cycle to disconnect the datasource when
